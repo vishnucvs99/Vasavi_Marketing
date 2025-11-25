@@ -58,7 +58,7 @@ export default function Home() {
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               {[
-                "Home", "My Account", "My Orders", "About Us",
+                "My Account", "My Orders", "About Us",
                 "Payment Policy", "Privacy Policy", "Return & Refund Policy",
                 "Shipping Policy", "Terms & Conditions", "Blog",
               ].map((link) => (

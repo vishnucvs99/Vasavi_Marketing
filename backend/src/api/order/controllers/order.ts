@@ -6,7 +6,7 @@ export default factories.createCoreController("api::order.order", ({ strapi }) =
     const { customer, cart, total } = ctx.request.body;
 
     if (!customer || !cart) {
-      return ctx.badRequest("Missing fields");
+      return ctx.badRequest("Missing field s");
     }
 
     // --- Create order ---

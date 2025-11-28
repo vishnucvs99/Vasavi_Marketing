@@ -16,7 +16,7 @@ export default function ProductsPage() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:1337/api/products?populate=*");
+        const res = await fetch("https://vasavi-marketing-backend.onrender.com/api/products?populate=*");
         const data = await res.json();
         setProducts(data.data || []);
       } catch (err) {

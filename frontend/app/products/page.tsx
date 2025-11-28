@@ -74,7 +74,7 @@ export default function ProductsPage() {
           const attrs = product;
           const imageUrl =
             attrs.Image && attrs.Image[0]?.url
-              ? `http://localhost:1337${attrs.Image[0].url}`
+              ? `https://vasavi-marketing-backend.onrender.com${attrs.Image[0].url}`
               : "/no-image.png";
 
           return (

@@ -36,7 +36,7 @@ const handlePlaceOrder = async () => {
   }
 
   try {
-    const res = await fetch("http://localhost:1337/api/order-email", {
+    const res = await fetch("https://vasavi-marketing-backend.onrender.com/api/order-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

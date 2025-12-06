@@ -1,65 +1,62 @@
-import React from "react";
+"use client";
 
-const Page = () => {
-  const product = {
-    name: "Premium Wireless Headphones",
-    price: "₹2000",
-    image: "/headphones.jpg", // Put any image in your public folder
-    description: `
-      Experience music like never before with our Premium Wireless Headphones.
-      Designed with advanced noise-cancellation, ultra-soft ear cushions, and
-      a long-lasting 40-hour battery, these headphones deliver studio-level
-      audio clarity whether you're working, traveling, or relaxing.  
-      
-      Featuring Bluetooth 5.3 for faster pairing, high-definition sound drivers
-      for deep bass and crisp highs, and a durable lightweight metal frame,
-      this is the perfect blend of style, comfort, and performance.
+import React, { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import Link from "next/link";
 
-      The built-in microphone ensures clear call quality, while the multi-device
-      support lets you seamlessly switch between your phone, laptop, and tablet.
-    `,
-  };
+export default function ProductDetails() {
+  const { id } = useParams();
+  const [product, setProduct] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
-//   const addToCart = () => {
-//     alert(`${product.name} added to cart!`);
-//   };
+  useEffect(() => {
+    if (!id) return;
+
+    const loadProduct = async () => {
+      try {
+        const res = await fetch("/products/products.json");
+        const data = await res.json();
+
+        // Find product by ID in static JSON
+        const matched = data.find((item: any) => item.id == id);
+
+        setProduct(matched);
+      } catch (err) {
+        console.error("Error loading product:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadProduct();
+  }, [id]);
+
+  if (loading) return <p className="text-center p-10">Loading...</p>;
+  if (!product) return <p className="text-center p-10">Product not found.</p>;
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-6 flex justify-center">
-      <div className="max-w-3xl bg-white p-8 rounded-2xl shadow-lg">
+    <div className="min-h-screen p-10 bg-gray-50">
+      <Link href="/products" className="text-blue-600 underline mb-6 block">
+        ← Back to Products
+      </Link>
 
+      <div className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
         {/* IMAGE */}
         <img
-          src={product.image}
-          alt={product.name}
-          className="w-full h-80 object-cover rounded-xl mb-6"
+          src={`/${product.Image}`}
+          alt={product.Name}
+          className="w-full h-80 object-cover rounded-xl"
         />
 
         {/* TITLE */}
-        <h1 className="text-3xl font-bold text-gray-900 mb-3">
-          {product.name}
-        </h1>
-
-        {/* PRICE */}
-        <p className="text-green-600 text-2xl font-semibold mb-4">
-          {product.price}
-        </p>
+        <h1 className="text-3xl font-bold mt-6">{product.Name}</h1>
 
         {/* DESCRIPTION */}
-        <p className="text-gray-700 leading-relaxed whitespace-pre-line mb-6">
-          {product.description}
-        </p>
+        <p className="text-gray-700 mt-4">{product.Description}</p>
 
-        {/* ADD TO CART BUTTON */}
-        <button
-        //   onClick={addToCart}
-          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 rounded-xl shadow-md transition"
-        >
-          Add to Cart
-        </button>
+        {/* PRICE */}
+        <p className="text-2xl font-bold text-green-600 mt-4">₹{product.Price}</p>
       </div>
     </div>
   );
-};
-
-export default Page;
+}

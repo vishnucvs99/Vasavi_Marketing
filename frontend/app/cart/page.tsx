@@ -28,39 +28,26 @@ export default function CartPage() {
 
   const totalPrice = cart.reduce((sum, item) => sum + (item.Price || 0), 0);
 
-  // ⭐ NEW: Static checkout (no payment)
-const handlePlaceOrder = async () => {
-  if (!customer.name || !customer.phone || !customer.email || !customer.address || !customer.pincode) {
-    alert("Please fill all fields.");
-    return;
-  }
-
-  try {
-    const res = await fetch("https://vasavi-marketing-backend.onrender.com/api/order-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        customer,
-        cart,
-        total: totalPrice,
-      }),
-    });
-
-    const data = await res.json();
-    if (data.success) {
-      setOrderSuccess(true);
-      setCart([]);
-      localStorage.removeItem("cart");
-    } else {
-      alert("Email sending failed.");
+  // ⭐ STATIC ORDER — no API call
+  const handlePlaceOrder = async () => {
+    if (!customer.name || !customer.phone || !customer.email || !customer.address || !customer.pincode) {
+      alert("Please fill all fields.");
+      return;
     }
 
-  } catch (err) {
-    console.error(err);
-    alert("Something went wrong.");
-  }
-};
+    // Pretend order was placed
+    setOrderSuccess(true);
 
+    // Clear cart
+    setCart([]);
+    localStorage.removeItem("cart");
+
+    console.log("Order placed:", {
+      customer,
+      cart,
+      total: totalPrice,
+    });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-purple-50 to-blue-50 p-8">
@@ -71,7 +58,8 @@ const handlePlaceOrder = async () => {
       {/* SUCCESS MESSAGE */}
       {orderSuccess && (
         <p className="text-center text-green-600 text-xl font-semibold mb-6">
-          🎉 Your order has been placed successfully!
+          🎉 Your order has been placed successfully!  
+          (Static — No backend used)
         </p>
       )}
 
@@ -133,16 +121,16 @@ const handlePlaceOrder = async () => {
                   value={customer.phone}
                   onChange={(e) => setCustomer({ ...customer, phone: e.target.value })}
                 />
-                <input
-  type="email"
-  placeholder="Email"
-  className="w-full p-3 border border-gray-300 rounded-xl bg-gray-50 
-  placeholder:text-black text-black
-  focus:ring-2 focus:ring-purple-400 focus:outline-none"
-  value={customer.email}
-  onChange={(e) => setCustomer({ ...customer, email: e.target.value })}
-/>
 
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="w-full p-3 border border-gray-300 rounded-xl bg-gray-50 
+                  placeholder:text-black text-black
+                  focus:ring-2 focus:ring-purple-400 focus:outline-none"
+                  value={customer.email}
+                  onChange={(e) => setCustomer({ ...customer, email: e.target.value })}
+                />
 
                 <textarea
                   placeholder="Full Address"
@@ -165,7 +153,6 @@ const handlePlaceOrder = async () => {
                 />
               </div>
 
-              {/* PLACE ORDER BUTTON */}
               <button
                 onClick={handlePlaceOrder}
                 className="w-full mt-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 text-white text-lg font-semibold rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition"

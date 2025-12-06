@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "Name": "Product One",
+    "Description": "This is the first sample product.",
+    "Price": 499,
+    "Image": "products/product1.jpg"
+  },
+  {
+    "id": 2,
+    "Name": "Product Two",
+    "Description": "This is the second sample product.",
+    "Price": 899,
+    "Image": "products/product2.jpg"
+  },
+  {
+    "id": 3,
+    "Name": "Product Three",
+    "Description": "This is the third sample product.",
+    "Price": 1299,
+    "Image": "products/product3.jpg"
+  },
+  {
+    "id": 4,
+    "Name": "Product four",
+    "Description": "This is the third sample product.",
+    "Price": 1299,
+    "Image": "products/product4.jpg"
+  },
+  {
+    "id": 5,
+    "Name": "Product five",
+    "Description": "This is the third sample product.",
+    "Price": 1299,
+    "Image": "products/product5.jpg"
+  }
+]

@@ -29,25 +29,48 @@ export default function CartPage() {
   const totalPrice = cart.reduce((sum, item) => sum + (item.Price || 0), 0);
 
   // ⭐ STATIC ORDER — no API call
-  const handlePlaceOrder = async () => {
-    if (!customer.name || !customer.phone || !customer.email || !customer.address || !customer.pincode) {
-      alert("Please fill all fields.");
-      return;
-    }
+const handlePlaceOrder = async () => {
+  if (!customer.name || !customer.phone || !customer.email || !customer.address || !customer.pincode) {
+    alert("Please fill all fields.");
+    return;
+  }
 
-    // Pretend order was placed
-    setOrderSuccess(true);
+  const adminPhone = "918247438114"; // ✅ Your WhatsApp number with country code
 
-    // Clear cart
-    setCart([]);
-    localStorage.removeItem("cart");
+  // Format cart items
+  const cartText = cart
+    .map((item, i) => `${i + 1}. ${item.Name} — ₹${item.Price}`)
+    .join("%0A");
 
-    console.log("Order placed:", {
-      customer,
-      cart,
-      total: totalPrice,
-    });
-  };
+  const message = `🛍️ *New Order Received*
+  
+*Customer Details:*
+👤 Name: ${customer.name}
+📞 Phone: ${customer.phone}
+📧 Email: ${customer.email}
+🏠 Address: ${customer.address}
+📮 Pincode: ${customer.pincode}
+
+*Order Items:*
+${cartText}
+
+💰 *Total:* ₹${totalPrice}
+
+Thank you!`;
+
+  const whatsappURL = `https://api.whatsapp.com/send?phone=${adminPhone}&text=${encodeURIComponent(
+    message
+  )}`;
+
+  // Open WhatsApp with the order message
+  window.open(whatsappURL, "_blank");
+
+  // Mark success + clear cart
+  setOrderSuccess(true);
+  setCart([]);
+  localStorage.removeItem("cart");
+};
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-purple-50 to-blue-50 p-8">

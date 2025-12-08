@@ -1,37 +1,37 @@
 [
   {
     "id": 1,
-    "Name": "Product One",
-    "Description": "This is the first sample product.",
-    "Price": 499,
-    "Image": "products/product1.jpg"
+    "Name": "AMJ Xiaoxia Crystal Loop LED Chandelier",
+    "Description": "The AMJ Xiaoxia Crystal Loop LED Chandelier is a premium designer light crafted for modern luxury interiors. Its double-loop illuminated structure features crystal-cut detailing that spreads soft, ambient light across the room. The chandelier adds a bold architectural statement while maintaining elegance and sophistication. Ideal for dining rooms, living areas, hotels, and premium décor spaces. Its energy-efficient LED lighting ensures long life and consistent brightness. A perfect blend of craftsmanship, innovation, and artistic modern lighting.",
+    "Price": 6000,
+    "Image": "products/chandelier.jpg"
   },
   {
     "id": 2,
-    "Name": "Product Two",
-    "Description": "This is the second sample product.",
-    "Price": 899,
+    "Name": "Aqua Glory RO Water Purifier – 14 Litres",
+    "Description": "The Aqua Glory RO Water Purifier features a high-capacity 14L detachable storage tank for easy cleaning and maintenance. Designed with advanced RO purification, it ensures safe, pure drinking water by removing impurities, bacteria, and dissolved solids. The sleek body is available in five premium color variants, making it suitable for modern kitchens. Its energy-efficient design ensures low power consumption while delivering high purification output. Perfect for households, offices, and commercial spaces seeking reliable and stylish water purification.",
+    "Price": 13500,
     "Image": "products/product2.jpg"
   },
   {
     "id": 3,
-    "Name": "Product Three",
-    "Description": "This is the third sample product.",
-    "Price": 1299,
+    "Name": "Aqua Pearl RO Water Purifier – 11 Litres",
+    "Description": "The Aqua Pearl RO Purifier combines functionality with a stylish semi-transparent purple tank that enhances visibility and adds elegance to any kitchen. With an 11L storage capacity and multi-stage RO filtration, it provides crystal-clear and safe drinking water. The purifier efficiently removes chemicals, microbes, and dissolved solids, ensuring healthy hydration. Its wall-mount design saves space and blends well with modern interiors. Built with durable materials for long-lasting performance, making it ideal for medium-sized families.",
+    "Price": 12500,
     "Image": "products/product3.jpg"
   },
   {
     "id": 4,
-    "Name": "Product four",
-    "Description": "This is the third sample product.",
-    "Price": 1299,
+    "Name": "Aquafresh RO Water Purifier – 9 Litres",
+    "Description": "The Aquafresh RO Water Purifier is a compact and reliable solution designed for small to medium households. Featuring a sleek blue curved tank, it provides 9 litres of purified water with advanced multi-stage filtration. The purifier ensures removal of harmful impurities, chemicals, and microorganisms, delivering fresh and safe drinking water daily. Its lightweight and wall-mountable structure makes installation easy and space-friendly. Ideal for customers seeking affordability without compromising water purification quality.",
+    "Price": 9500,
     "Image": "products/product4.jpg"
   },
   {
     "id": 5,
-    "Name": "Product five",
-    "Description": "This is the third sample product.",
-    "Price": 1299,
+    "Name": "AeroBlade 3-Blade Modern Ceiling Fan (White)",
+    "Description": "The AeroBlade modern ceiling fan features a unique aerodynamic 3-blade design engineered for maximum airflow and silent performance. Its matte-white finish blends seamlessly with contemporary home and office interiors. The fan delivers smooth, powerful air circulation even at low speed settings. Crafted with durable ABS blades, it offers long-lasting performance with minimum noise. Perfect for bedrooms, living rooms, lounges, and minimalist-style spaces that demand both elegance and comfort.",
+    "Price": 4000,
     "Image": "products/product5.jpg"
   }
 ]

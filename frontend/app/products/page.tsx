@@ -57,7 +57,7 @@ export default function ProductsPage() {
               className="w-full h-56 object-cover rounded-xl mb-4"
             />
 
-            <h2 className="text-xl font-semibold mb-1">
+            <h2 className="text-gray-900 text-sm mb-3 line-clamp-2">
               <Link href={`/products/${product.id}`} className="hover:text-purple-600">
                 {product.Name}
               </Link>

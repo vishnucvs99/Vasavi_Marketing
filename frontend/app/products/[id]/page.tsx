@@ -49,7 +49,7 @@ export default function ProductDetails() {
         />
 
         {/* TITLE */}
-        <h1 className="text-3xl font-bold mt-6">{product.Name}</h1>
+        <h1 className="text-gray-900 text-sm mb-3 line-clamp-2">{product.Name}</h1>
 
         {/* DESCRIPTION */}
         <p className="text-gray-700 mt-4">{product.Description}</p>

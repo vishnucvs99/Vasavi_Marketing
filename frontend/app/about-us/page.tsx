@@ -27,29 +27,30 @@ export default function AboutUs() {
 
         <p className="text-gray-700 leading-relaxed mb-8">
           Welcome to <strong>Vasavi Marketing</strong> — your trusted
-          destination for cameras, electronics, and premium accessories.  
+          destination for  electronics, and premium accessories.
           Our mission is to provide high-quality products, transparent service,
           and exceptional customer support for every shopper.
         </p>
 
         <Section title="Who We Are">
           <p>
-            Founded in Kerala, CameraScan has grown into a reliable store for
-            photographers, students, and tech lovers. With years of experience,
-            we understand what customers need and offer products that deliver
-            true value and performance.
+            Founded in Kurnool, Vasavi Marketing is a trusted electronics and household
+            products store serving customers with quality and reliability. With years
+            of experience in the retail market, we understand customer needs and focus
+            on providing products that offer real value, durability, and performance.
           </p>
         </Section>
 
         <Section title="What We Offer">
           <ul className="list-disc ml-6 space-y-2">
-            <li>DSLR & Mirrorless Cameras</li>
-            <li>Camera Lenses & Accessories</li>
-            <li>Lighting & Audio Equipment</li>
-            <li>Mobile Accessories & Gadgets</li>
-            <li>On-Site Support & Service Assistance</li>
+            <li>Home & Kitchen Appliances</li>
+            <li>Electrical & Electronic Items</li>
+            <li>Fans, Mixers, Grinders & Small Appliances</li>
+            <li>Mobile Accessories & Everyday Gadgets</li>
+            <li>After-Sales Support & Service Assistance</li>
           </ul>
         </Section>
+
 
         <Section title="Our Values">
           <ul className="list-disc ml-6 space-y-2">

@@ -30,67 +30,83 @@ export default function PrivacyPolicy() {
         </p>
 
         <p className="text-gray-700 leading-relaxed mb-8">
-          This Privacy Policy explains how we collect, use, store, and protect your
-          personal information when you use our website. By accessing our services,
-          you agree to the terms outlined in this policy.
+          This Privacy Policy explains how we collect, use, and protect your
+          information when you use our website or services.
         </p>
 
         <Section title="1. Information We Collect">
           <ul className="list-disc ml-6 space-y-2">
-            <li>Name, email address, phone number</li>
-            <li>Billing and shipping address</li>
-            <li>Payment information (securely processed)</li>
-            <li>Device details, IP address, and cookies</li>
-            <li>Order history & customer support messages</li>
+            <li>
+              <strong>Personal Information:</strong> Name, email address, shipping
+              address, phone number, and payment information when you make a
+              purchase, create an account, or contact us.
+            </li>
+            <li>
+              <strong>Non-Personal Information:</strong> Browser type, operating
+              system, and browsing behavior used to improve our website and services.
+            </li>
           </ul>
         </Section>
 
         <Section title="2. How We Use Your Information">
           <ul className="list-disc ml-6 space-y-2">
-            <li>To process and deliver orders</li>
-            <li>To send order updates & account notifications</li>
-            <li>To verify payments and prevent fraud</li>
-            <li>To improve website performance and user experience</li>
-            <li>To offer customer support</li>
+            <li>To process and fulfill your orders</li>
+            <li>To communicate order updates and respond to inquiries</li>
+            <li>To send promotional emails if you have opted in</li>
+            <li>To analyze usage and improve website performance</li>
           </ul>
         </Section>
 
-        <Section title="3. Sharing of Information">
-          <p>
-            We do not sell or rent your personal information. However, we may
-            share your data with trusted partners:
-          </p>
-          <ul className="list-disc ml-6 mt-3 space-y-2">
-            <li>Secure payment gateways</li>
-            <li>Courier partners for deliveries</li>
-            <li>Law authorities if legally required</li>
+        <Section title="3. Information Sharing">
+          <ul className="list-disc ml-6 space-y-2">
+            <li>
+              <strong>Third-Party Service Providers:</strong> We may share your
+              information with trusted partners who assist with payment processing,
+              website operations, and order delivery.
+            </li>
+            <li>
+              <strong>Legal Requirements:</strong> We may disclose information if
+              required by law or to protect our rights.
+            </li>
           </ul>
         </Section>
 
         <Section title="4. Data Security">
-          We use encryption, secure servers, and firewalls to safeguard your data.
-          Only authorized personnel have access to sensitive information.
+          <p>
+            We implement appropriate security measures to protect your personal
+            information from unauthorized access, alteration, disclosure, or
+            destruction.
+          </p>
         </Section>
 
-        <Section title="5. Cookies">
-          Our website uses cookies to improve website performance and personalize
-          your browsing experience.
-        </Section>
-
-        <Section title="6. Your Rights">
+        <Section title="5. Your Rights">
           <ul className="list-disc ml-6 space-y-2">
-            <li>Request access to your data</li>
-            <li>Request corrections or updates</li>
-            <li>Request deletion of personal data</li>
-            <li>Opt out of promotional messages</li>
+            <li>
+              <strong>Access and Correction:</strong> You can access and update your
+              personal information through your account.
+            </li>
+            <li>
+              <strong>Opt-Out:</strong> You may unsubscribe from promotional emails
+              using the link provided in the email.
+            </li>
           </ul>
         </Section>
 
-        <Section title="7. Contact Us">
+        <Section title="6. Changes to This Policy">
+          <p>
+            We may update this Privacy Policy from time to time. Any changes will be
+            posted on this page with an updated effective date.
+          </p>
+        </Section>
+
+        {/* <Section title="7. Contact Us">
           <p className="mb-1">📧 Email: vishnucvs99@gmail.com</p>
           <p className="mb-1">📞 Phone: +91 8247438114</p>
-           <p>🏢 Address: Kurnool(D), Sirvella (M), Yerraguntla (V), main street Murali Book stores opposite [518510]</p>
-        </Section>
+          <p>
+            🏢 Address: Kurnool(D), Sirvella (M), Yerraguntla (V), Main Street,
+            Murali Book Stores Opposite, 518510
+          </p>
+        </Section> */}
 
         <p className="text-sm text-gray-500">
           Continued use of our website indicates acceptance of this Privacy Policy.

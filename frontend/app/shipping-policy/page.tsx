@@ -14,56 +14,77 @@ export default function ShippingPolicy() {
         </p>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          This Shipping Policy outlines how CameraScan Kottayam processes, 
-          delivers, and handles shipping-related concerns for customer orders.
+          This Shipping Policy outlines how Vasavi Marketing processes, ships,
+          and delivers customer orders placed through our website.
         </p>
 
         {/* Sections */}
-        <Section title="1. Shipping Coverage">
-          We currently ship products across Andhara Pradesh. Some remote locations may 
-          have limited coverage based on courier partner availability.
+        <Section title="1. Processing Time">
+          <p>
+            All orders are processed within <strong>1–2 business days</strong>.
+            During peak periods such as festival seasons, processing may take
+            slightly longer; however, we make every effort to ship orders as
+            quickly as possible.
+          </p>
         </Section>
 
-        <Section title="2. Delivery Time">
+        <Section title="2. Shipping Coverage">
+          <p>
+            We currently ship products across Andhra Pradesh. Shipping availability
+            to remote or rural locations may vary depending on courier partner coverage.
+          </p>
+        </Section>
+
+        <Section title="3. Delivery Time">
+          <p className="mb-3">
+            Delivery times depend on your location and courier availability:
+          </p>
           <ul className="list-disc ml-6 space-y-2">
-            <li>Standard delivery: 2–5 business days</li>
-            <li>High-demand or remote locations: 5–7 business days</li>
-            <li>Store pickup orders: Ready within 24–48 hours</li>
+            <li>Standard delivery: 3–7 business days</li>
+            <li>High-demand or festive periods may cause delays</li>
+            <li>Delays may also occur due to weather conditions or unforeseen events</li>
           </ul>
         </Section>
 
-        <Section title="3. Shipping Charges">
+        <Section title="4. Shipping Charges">
           <ul className="list-disc ml-6 space-y-2">
-            <li>Shipping fees vary based on location and product weight.</li>
-            <li>COD orders may include additional handling charges.</li>
+            <li>Shipping charges vary based on delivery location and product weight.</li>
+            <li>Cash on Delivery (COD) orders may include additional handling charges.</li>
           </ul>
         </Section>
 
-        <Section title="4. Order Tracking">
-          Once your order is shipped, you will receive an SMS or email containing 
-          the tracking ID and courier partner details.
+        <Section title="5. Order Tracking">
+          <p>
+            Once your order is shipped, you will receive a tracking number via
+            email or SMS. You can use this tracking information to monitor your
+            shipment in real time.
+          </p>
         </Section>
 
-        <Section title="5. Delivery Issues">
+        <Section title="6. Delivery Issues">
           <ul className="list-disc ml-6 space-y-2">
-            <li>If the courier attempts delivery and the customer is unavailable, re-delivery will be scheduled.</li>
-            <li>After 2 failed attempts, the package may be returned to us.</li>
+            <li>If the courier attempts delivery when you are unavailable, a re-delivery will be scheduled.</li>
+            <li>After two failed delivery attempts, the order may be returned to us.</li>
           </ul>
         </Section>
 
-        <Section title="6. Damaged or Missing Items">
+        <Section title="7. Damaged or Missing Items">
           <ul className="list-disc ml-6 space-y-2">
-            <li>Report any damage within 24 hours of delivery.</li>
-            <li>Unboxing video is mandatory for damage claims.</li>
-            <li>Replacement will be provided after verification.</li>
+            <li>Any damaged or missing items must be reported within 24 hours of delivery.</li>
+            <li>An unboxing video is mandatory for processing damage claims.</li>
+            <li>Replacement or resolution will be provided after verification.</li>
           </ul>
         </Section>
 
-        <Section title="7. Contact Us">
+        <Section title="8. Contact Us">
           <p className="mb-2">📧 Email: vishnucvs@gmail.com</p>
           <p className="mb-2">📞 Phone: +91 8247438114</p>
-          <p>🏢 Address: Kurnool(D), Sirvella (M), Yerraguntla (V), main street Murali Book stores opposite [518510]</p>
+          <p>
+            🏢 Address: Kurnool(D), Sirvella (M), Yerraguntla (V),
+            Main Street, Murali Book Stores Opposite, 518510
+          </p>
         </Section>
+
       </div>
     </div>
   );
@@ -77,4 +98,3 @@ function Section({ title, children }: { title: string; children: React.ReactNode
     </div>
   );
 }
-

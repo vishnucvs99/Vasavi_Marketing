@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function AccountPage() {
   return (
@@ -14,14 +15,20 @@ export default function AccountPage() {
       >
         <div className="flex flex-col items-center text-center">
 
+          {/* Profile Image */}
           <motion.div
             initial={{ y: -15, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
+            className="relative w-36 h-36 rounded-full overflow-hidden shadow-lg"
           >
-            <div className="w-36 h-36 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
-              👤
-            </div>
+            <Image
+              src="/vishnu.jpg"
+              alt="Profile Image"
+              fill
+              className="object-cover"
+              priority
+            />
           </motion.div>
 
           <h1 className="text-3xl font-bold text-gray-800 mt-6">
@@ -37,7 +44,7 @@ export default function AccountPage() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              href="/orders"
+              href="/my-orders"
               className="block bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-xl font-semibold shadow-md transition"
             >
               📦 View Orders
@@ -46,7 +53,7 @@ export default function AccountPage() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              href="/profile"
+              href="/edit-profile"
               className="block bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold shadow-md transition"
             >
               📝 Edit Profile
@@ -58,4 +65,3 @@ export default function AccountPage() {
     </div>
   );
 }
-    
